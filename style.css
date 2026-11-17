@@ -1,0 +1,300 @@
+
+/* =====================================
+   WEEK 3 - BUDGET TRACKER VISUAL DESIGN
+   ===================================== */
+
+/* GOOGLE FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap');
+
+
+/* 1. COLOR PALETTE */
+:root {
+    --primary: #172B4D;
+    --secondary: #16A085;
+    --background: #F3F6FA;
+    --white: #FFFFFF;
+    --text: #344054;
+    --muted: #667085;
+    --border: #E0E5EC;
+    --table-row: #F0F8F5;
+    --shadow: 0 5px 20px rgba(23, 43, 77, 0.08);
+}
+
+
+/* 2. GENERAL STYLING */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--background);
+    color: var(--text);
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+
+/* 3. PAGE HEADING CARD */
+header {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 30px 20px;
+    background-color: var(--primary);
+    color: var(--white);
+    text-align: center;
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+}
+
+header img {
+    display: block;
+    margin: 0 auto 12px;
+    width: 65px;
+    height: auto;
+}
+
+header h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    margin: 5px 0;
+    color: var(--white);
+}
+
+header p {
+    color: #DCE6F2;
+    margin: 5px 0;
+}
+
+
+/* 4. MAIN CONTENT */
+main {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+
+/* 5. SECTION CARDS */
+.add-expense-section,
+.expenses-section,
+.instructions-section,
+.video-section {
+    background-color: var(--white);
+    margin-bottom: 28px;
+    padding: 28px;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    box-shadow: var(--shadow);
+}
+
+
+/* 6. SECTION HEADINGS */
+.section-title {
+    font-family: 'Poppins', sans-serif;
+    color: var(--primary);
+    font-size: 23px;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 22px;
+    border-left: 5px solid var(--secondary);
+    padding-left: 12px;
+}
+
+
+/* 7. FORM STYLING */
+.add-expense-section > form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+label {
+    font-family: 'Inter', sans-serif;
+    color: var(--primary);
+    font-weight: 600;
+    margin-top: 5px;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 13px 15px;
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    color: var(--text);
+    background-color: #FAFBFC;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+
+/* INPUT FOCUS EFFECT */
+input:focus,
+select:focus {
+    outline: none;
+    border-color: var(--secondary);
+    box-shadow: 0 0 0 3px rgba(22, 160, 133, 0.12);
+    background-color: var(--white);
+}
+
+
+/* 8. BUTTON STYLING */
+button {
+    background-color: var(--secondary);
+    color: var(--white);
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    padding: 14px 20px;
+    margin-top: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #117A65;
+    transform: translateY(-2px);
+}
+
+
+/* 9. EXPENSE TABLE */
+.expenses-section {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    background-color: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th {
+    background-color: var(--primary);
+    color: var(--white);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    text-align: left;
+    padding: 16px 14px;
+    border: 1px solid var(--primary);
+}
+
+td {
+    padding: 14px;
+    border: 1px solid var(--border);
+    font-size: 14px;
+}
+
+
+/* ALTERNATING ROW COLORS */
+tbody tr:nth-child(even) {
+    background-color: var(--table-row);
+}
+
+tbody tr:nth-child(odd) {
+    background-color: var(--white);
+}
+
+
+/* TABLE HOVER EFFECT */
+tbody tr:hover {
+    background-color: #D9F2E9;
+    transition: background-color 0.2s;
+}
+
+
+/* 10. INSTRUCTIONS */
+.instructions-section details {
+    padding: 5px;
+}
+
+.instructions-section summary {
+    color: var(--primary);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.instructions-section details p {
+    color: var(--muted);
+    margin-left: 15px;
+}
+
+
+/* 11. VIDEO SECTION */
+.video-section {
+    text-align: center;
+}
+
+.video-section iframe {
+    max-width: 100%;
+    border: none;
+    border-radius: 10px;
+}
+
+.video-section p {
+    color: var(--muted);
+}
+
+
+/* 12. FOOTER */
+footer {
+    background-color: var(--primary);
+    color: var(--white);
+    text-align: center;
+    padding: 20px;
+    margin-top: 35px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+
+/* 13. MOBILE RESPONSIVENESS */
+@media (max-width: 600px) {
+
+    header {
+        margin: 15px;
+        padding: 25px 15px;
+    }
+
+    header h1 {
+        font-size: 25px;
+    }
+
+    main {
+        padding: 0 12px;
+        margin: 20px auto;
+    }
+
+    .add-expense-section,
+    .expenses-section,
+    .instructions-section,
+    .video-section {
+        padding: 18px;
+        margin-bottom: 20px;
+    }
+
+    .section-title {
+        font-size: 19px;
+    }
+
+    th,
+    td {
+        padding: 9px;
+        font-size: 12px;
+    }
+}
